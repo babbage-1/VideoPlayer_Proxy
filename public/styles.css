@@ -1,7 +1,7 @@
-* {
+/* * {
   border: none;
   margin: 0;
-}
+} */
 
 body {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.75)), url(https://s3.us-east-2.amazonaws.com/fec-hrr37-brian/moviebackground.jpg);
@@ -9,12 +9,12 @@ body {
   background-repeat: no-repeat;
 }
 
-.content-wrapper {
+/* .content-wrapper {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 12vh 9.5vh 84vh 23vh 34vh;
   height: 163vh;
-}
+} */
 
 #app-nav {
   grid-column: 1 / 3;
