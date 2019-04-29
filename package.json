@@ -9,16 +9,17 @@
   },
   "scripts": {
     "start": "nodemon server/index.js",
-    "server": "node server/index.js"
+    "server": "node server/index.js",
+    "artillery": "artillery run proxytest.yml"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
     "express": "^4.16.4",
-    "newrelic": "^5.7.0"
+    "newrelic": "^5.7.0",
+    "http-proxy-middleware": "^0.19.1"
   },
   "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
-    "http-proxy-middleware": "^0.19.1"
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
   }
 }

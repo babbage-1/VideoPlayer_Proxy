@@ -6,8 +6,8 @@ config:
     - duration: 60
       arrivalRate: 1
       rampTo: 20
-    - duration: 300
-      arrivalRate: 20
+    - duration: 600
+      arrivalRate: 25
   defaults:
     headers:
       # x-my-service-auth: '987401838271002188298567'
@@ -21,14 +21,14 @@ scenarios:
     weight: 20
     flow:
       - loop:
-        - think: 1
+        - think: 5
         - get:
             url: "/videos/{{ id }}"
         count: 5
   - name: "POST requests"
     weight: 1
     flow:
-      - think: 20
+      - think: 30
       - post:
           url: "/videos/add"
           json:
