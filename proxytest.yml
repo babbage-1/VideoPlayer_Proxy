@@ -1,0 +1,38 @@
+config:
+  target: 'http://localhost:3000'
+  http:
+    pool: 10
+  phases:
+    - duration: 60
+      arrivalRate: 1
+      rampTo: 20
+    - duration: 300
+      arrivalRate: 20
+  defaults:
+    headers:
+      # x-my-service-auth: '987401838271002188298567'
+  payload:
+    path: "id.csv"
+    fields:
+      - "id"
+    skipheader: true
+scenarios:
+  - name: "GET requests"
+    weight: 20
+    flow:
+      - loop:
+        - think: 1
+        - get:
+            url: "/videos/{{ id }}"
+        count: 5
+  - name: "POST requests"
+    weight: 1
+    flow:
+      - think: 20
+      - post:
+          url: "/videos/add"
+          json:
+            name: "test"
+            url: "https://www.youtube.com/watch?v=XfRY0ASZHuU"
+
+
