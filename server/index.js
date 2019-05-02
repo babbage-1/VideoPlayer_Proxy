@@ -17,6 +17,11 @@ console.log(staticPath);
 app.use('/fandangit/:id', express.static(path.join(__dirname, '/../public')));
 
 
+app.get('/loaderio-fa5c50a3c85242e75a3bc38ee6b02c8e', (req, res) => {
+  const filePath = path.join(__dirname, '../loaderio-fa5c50a3c85242e75a3bc38ee6b02c8e.txt');
+  res.sendFile(filePath);
+});
+
 //video carousel
 const videoCarouselOptions = {
   target: 'http://ec2-13-57-213-223.us-west-1.compute.amazonaws.com:3001',
