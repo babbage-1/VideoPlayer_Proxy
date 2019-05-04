@@ -5,7 +5,7 @@ const morgan = require('morgan');
 const proxy = require('http-proxy-middleware');
 const cors = require('cors');
 const app = express();
-const PORT = process.env.PORT || 3006;
+const PORT = process.env.PORT || 3005;
 
 app.use(morgan('dev'));
 app.use(cors());
@@ -17,8 +17,8 @@ console.log(staticPath);
 app.use('/fandangit/:id', express.static(path.join(__dirname, '/../public')));
 
 
-app.get('/loaderio-fa5c50a3c85242e75a3bc38ee6b02c8e', (req, res) => {
-  const filePath = path.join(__dirname, '../loaderio-fa5c50a3c85242e75a3bc38ee6b02c8e.txt');
+app.get('/loaderio-2a15409fc5a42a59d3bd46e148f23a68', (req, res) => {
+  const filePath = path.join(__dirname, '../loaderio-2a15409fc5a42a59d3bd46e148f23a68.txt');
   res.sendFile(filePath);
 });
 
