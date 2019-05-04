@@ -5,7 +5,7 @@ const morgan = require('morgan');
 const proxy = require('http-proxy-middleware');
 const cors = require('cors');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3005;
 
 app.use(morgan('dev'));
 app.use(cors());
