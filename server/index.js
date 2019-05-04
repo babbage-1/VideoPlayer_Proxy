@@ -24,7 +24,7 @@ app.get('/loaderio-fa5c50a3c85242e75a3bc38ee6b02c8e', (req, res) => {
 
 //video carousel
 const videoCarouselOptions = {
-  target: 'http://ec2-13-57-213-223.us-west-1.compute.amazonaws.com:3001',
+  target: 'http://ec2-13-57-213-223.us-west-1.compute.amazonaws.com:8000',
   changeOrigin: true
 };
 const videoCarouselProxy = proxy(videoCarouselOptions);
@@ -32,7 +32,7 @@ app.use('/videos', videoCarouselProxy);
 
 //actors
 const actorsOptions = {
-  target: 'http://ec2-13-57-198-90.us-west-1.compute.amazonaws.com:2002',
+  target: 'http://ec2-13-57-198-90.us-west-1.compute.amazonaws.com:8000',
   changeOrigin: true
 };
 const actorsProxy = proxy(actorsOptions);
@@ -40,7 +40,7 @@ app.use('/actors', actorsProxy);
 
 //main info
 const infoOptions = {
-  target: 'http://ec2-54-91-248-31.compute-1.amazonaws.com:2000',
+  target: 'http://ec2-54-161-202-111.compute-1.amazonaws.com:8000',
   changeOrigin: true
 };
 const infoProxy = proxy(infoOptions);
