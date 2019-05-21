@@ -1,8 +1,8 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
-  "author": "",
+  "name": "MovieOke",
+  "version": "1.1.1",
+  "description": "Proxy for a movie trailer apllication",
+  "author": "Aysun Sulun Tas",
   "license": "",
   "engines": {
     "node": ">=6.13.0"
